@@ -64,46 +64,6 @@ function AnimatedSection({
   );
 }
 
-
-
-/* ─── Skill Bar ─── */
-function SkillBar({
-  name,
-  level,
-  icon: Icon,
-  color = "bg-teal",
-}: {
-  name: string;
-  level: number;
-  icon: React.ElementType;
-  color?: string;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <div ref={ref} className="group">
-      <div className="flex items-center gap-3 mb-2">
-        <div className="p-1.5 rounded-md bg-secondary group-hover:bg-teal/10 transition-colors">
-          <Icon className="w-4 h-4 text-teal" />
-        </div>
-        <span className="text-sm font-medium text-foreground">{name}</span>
-        <span className="text-xs text-muted-foreground ml-auto">
-          {level}%
-        </span>
-      </div>
-      <div className="h-2 bg-secondary rounded-full overflow-hidden">
-        <motion.div
-          className={`h-full rounded-full ${color}`}
-          initial={{ width: 0 }}
-          animate={isInView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
-      </div>
-    </div>
-  );
-}
-
 /* ─── Timeline Item ─── */
 function TimelineItem({
   year,
