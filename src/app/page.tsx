@@ -220,32 +220,9 @@ export default function Home() {
                   View Projects
                 </Button>
               </a>
-              <a href="#about">
-                <Button className="bg-teal hover:bg-teal-dark text-white px-8 py-6 text-base rounded-xl shadow-lg shadow-teal/20 transition-all hover:shadow-xl hover:shadow-teal/30">
-                  About Me
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </a>
             </motion.div>
           </div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        >
-          <a
-            href="#about"
-            className="flex flex-col items-center gap-2 text-white/40 hover:text-white/70 transition-colors"
-          >
-            <span className="text-xs uppercase tracking-widest">Scroll</span>
-            <ChevronDown className="w-5 h-5 animate-bounce" />
-          </a>
-        </motion.div>
-      </section>
 
       {/* ─── AMBITION QUOTE ─── */}
       <section className="relative z-10 -mt-12">
@@ -351,7 +328,7 @@ export default function Home() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["Python", "NLP", "Machine Learning", "Flask", "CSV Processing"].map(
+                    {["Python", "NLP", "Machine Learning", "Streamlit", "CSV Processing"].map(
                       (tech) => (
                         <Badge
                           key={tech}
@@ -366,6 +343,7 @@ export default function Home() {
 
                   <a
                     href="https://university-equivalence-system-marah.streamlit.app/"
+                    target="_blank"
                     className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all group"
                   >
                     View Project
@@ -440,6 +418,7 @@ export default function Home() {
 
                   <a
                     href="https://marah-chatbot.streamlit.app/"
+                    target="_blank"
                     className="inline-flex items-center gap-2 text-amber font-medium text-sm hover:gap-3 transition-all group"
                   >
                     View Project
@@ -559,7 +538,7 @@ export default function Home() {
               <span className="text-teal-light">AI</span> Portfolio
             </div>
             <div className="text-sm">
-              Built with passion &amp; AI · Computer Engineering Graduate
+              Eng. Marah Ahmed Aljabali © All Rights Reserved 2026. 
             </div>
             <div className="flex items-center gap-4">
               <a
