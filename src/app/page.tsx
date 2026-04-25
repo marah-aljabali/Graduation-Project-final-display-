@@ -161,8 +161,6 @@ export default function Home() {
               {[
                 ["About", "#about"],
                 ["Projects", "#projects"],
-                ["Skills", "#skills"],
-                ["Education", "#education"],
                 ["Contact", "#contact"],
               ].map(([label, href]) => (
                 <a
@@ -312,110 +310,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── ABOUT SECTION ─── */}
-      <section id="about" className="py-24 md:py-32">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <Badge
-                variant="secondary"
-                className="mb-4 text-teal bg-teal/10 border-teal/20"
-              >
-                About Me
-              </Badge>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-                Driven by Curiosity,
-                <br />
-                <span className="text-teal">Powered by AI</span>
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                A Computer Engineering graduate passionate about leveraging
-                artificial intelligence to solve real-world problems.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            <AnimatedSection delay={0.1}>
-              <Card className="h-full border-none shadow-lg shadow-navy/5 rounded-2xl overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-teal to-teal-dark" />
-                <CardHeader>
-                  <CardTitle className="font-serif text-xl flex items-center gap-2">
-                    <Cpu className="w-5 h-5 text-teal" />
-                    Who I Am
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    I am a Computer Engineering graduate who believes that
-                    technology should serve people. My journey in AI began with
-                    curiosity about how machines can understand and assist humans
-                    — and it grew into two full-fledged graduation projects that
-                    tackle meaningful challenges.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    From building intelligent equivalence verification systems to
-                    creating conversational AI assistants for university
-                    students, I thrive at the intersection of software
-                    engineering and artificial intelligence.
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <Card className="h-full border-none shadow-lg shadow-navy/5 rounded-2xl overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-amber to-amber-light" />
-                <CardHeader>
-                  <CardTitle className="font-serif text-xl flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-amber" />
-                    What Drives Me
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        icon: Brain,
-                        title: "AI-First Thinking",
-                        desc: "Every problem is an opportunity to apply intelligent solutions.",
-                      },
-                      {
-                        icon: Users,
-                        title: "User-Centric Design",
-                        desc: "Technology is only valuable when it genuinely helps people.",
-                      },
-                      {
-                        icon: Shield,
-                        title: "Ethical AI",
-                        desc: "Building responsible systems that respect privacy and fairness.",
-                      },
-                    ].map((item) => (
-                      <div
-                        key={item.title}
-                        className="flex items-start gap-3 group"
-                      >
-                        <div className="p-2 rounded-lg bg-secondary group-hover:bg-teal/10 transition-colors mt-0.5">
-                          <item.icon className="w-4 h-4 text-teal" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-sm text-foreground">
-                            {item.title}
-                          </h4>
-                          <p className="text-xs text-muted-foreground leading-relaxed">
-                            {item.desc}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
       {/* ─── PROJECTS SECTION ─── */}
       <section id="projects" className="py-24 md:py-32 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -512,7 +406,7 @@ export default function Home() {
                   </div>
 
                   <a
-                    href="#"
+                    href="https://university-equivalence-system-marah.streamlit.app/"
                     className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all group"
                   >
                     View Project
@@ -572,7 +466,7 @@ export default function Home() {
                       "Python",
                       "LLM / RAG",
                       "Web Scraping",
-                      "FastAPI",
+                      "Langchain",
                       "Streamlit",
                     ].map((tech) => (
                       <Badge
@@ -586,7 +480,7 @@ export default function Home() {
                   </div>
 
                   <a
-                    href="#"
+                    href="https://marah-chatbot.streamlit.app/"
                     className="inline-flex items-center gap-2 text-amber font-medium text-sm hover:gap-3 transition-all group"
                   >
                     View Project
@@ -615,159 +509,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SKILLS SECTION ─── */}
-      <section id="skills" className="py-24 md:py-32 bg-cream">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <Badge
-                variant="secondary"
-                className="mb-4 text-teal bg-teal/10 border-teal/20"
-              >
-                Technical Skills
-              </Badge>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-                Tools & Technologies
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                A blend of AI, software engineering, and web development skills
-                honed through academic projects and self-driven learning.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* AI & ML */}
-            <AnimatedSection delay={0.1}>
-              <Card className="h-full border-none shadow-lg shadow-navy/5 rounded-2xl overflow-hidden">
-                <div className="h-1.5 bg-teal" />
-                <CardHeader>
-                  <CardTitle className="font-serif text-lg flex items-center gap-2">
-                    <Brain className="w-5 h-5 text-teal" />
-                    AI & Machine Learning
-                  </CardTitle>
-                  <CardDescription>
-                    Core intelligence behind my projects
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <SkillBar name="Python" level={92} icon={Terminal} />
-                  <SkillBar name="NLP / NLU" level={85} icon={MessageSquare} />
-                  <SkillBar
-                    name="Scikit-learn"
-                    level={88}
-                    icon={BarChart3}
-                  />
-                  <SkillBar name="LLM / RAG" level={80} icon={Brain} />
-                  <SkillBar
-                    name="Deep Learning"
-                    level={75}
-                    icon={Network}
-                    color="bg-teal-dark"
-                  />
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Backend */}
-            <AnimatedSection delay={0.2}>
-              <Card className="h-full border-none shadow-lg shadow-navy/5 rounded-2xl overflow-hidden">
-                <div className="h-1.5 bg-amber" />
-                <CardHeader>
-                  <CardTitle className="font-serif text-lg flex items-center gap-2">
-                    <Database className="w-5 h-5 text-amber" />
-                    Backend & Data
-                  </CardTitle>
-                  <CardDescription>
-                    Server-side engineering and data pipelines
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <SkillBar
-                    name="Flask / FastAPI"
-                    level={88}
-                    icon={Code2}
-                    color="bg-amber"
-                  />
-                  <SkillBar
-                    name="SQL / Databases"
-                    level={82}
-                    icon={Database}
-                    color="bg-amber"
-                  />
-                  <SkillBar
-                    name="REST APIs"
-                    level={90}
-                    icon={Globe}
-                    color="bg-amber"
-                  />
-                  <SkillBar
-                    name="Data Processing"
-                    level={85}
-                    icon={Layers}
-                    color="bg-amber"
-                  />
-                  <SkillBar
-                    name="Streamlit"
-                    level={87}
-                    icon={Zap}
-                    color="bg-amber-light"
-                  />
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Frontend & Tools */}
-            <AnimatedSection delay={0.3}>
-              <Card className="h-full border-none shadow-lg shadow-navy/5 rounded-2xl overflow-hidden">
-                <div className="h-1.5 bg-navy" />
-                <CardHeader>
-                  <CardTitle className="font-serif text-lg flex items-center gap-2">
-                    <Code2 className="w-5 h-5 text-navy" />
-                    Frontend & Tools
-                  </CardTitle>
-                  <CardDescription>
-                    Building intuitive user interfaces
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <SkillBar
-                    name="React / Next.js"
-                    level={80}
-                    icon={Code2}
-                    color="bg-navy"
-                  />
-                  <SkillBar
-                    name="HTML / CSS"
-                    level={90}
-                    icon={Layers}
-                    color="bg-navy"
-                  />
-                  <SkillBar
-                    name="JavaScript / TS"
-                    level={78}
-                    icon={Terminal}
-                    color="bg-navy"
-                  />
-                  <SkillBar
-                    name="Git / GitHub"
-                    level={85}
-                    icon={Github}
-                    color="bg-navy-light"
-                  />
-                  <SkillBar
-                    name="UI/UX Design"
-                    level={72}
-                    icon={Sparkles}
-                    color="bg-navy-light"
-                  />
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
       {/* ─── EDUCATION TIMELINE ─── */}
       <section id="education" className="py-24 md:py-32 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -788,26 +529,10 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <AnimatedSection delay={0.1}>
               <TimelineItem
-                year="2021 – 2025"
+                year="2021 – 2026"
                 title="B.Sc. in Computer Engineering"
                 description="Studied core computer engineering subjects including algorithms, data structures, software engineering, AI, and machine learning. Graduated with two AI-focused capstone projects."
                 icon={GraduationCap}
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <TimelineItem
-                year="2024 – 2025"
-                title="Graduation Project: Equivalence System"
-                description="Built an AI-powered academic equivalence system that accepts CSV files with flexible column ordering, supporting Arabic-Arabic, Arabic-English, and English-English document similarity comparison using NLP."
-                icon={FileCheck}
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={0.3}>
-              <TimelineItem
-                year="2024 – 2025"
-                title="Graduation Project: AI Assistant for Uni"
-                description="Developed a conversational AI chatbot that auto-scrapes the university website and academic files to build a self-updating knowledge base (weekly), providing instant answers using LLM and RAG."
-                icon={Bot}
               />
             </AnimatedSection>
           </div>
@@ -838,13 +563,13 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <a href="mailto:your.email@example.com">
+                  <a href="mailto:aljabalymarah@gmail.com">
                     <Button className="bg-teal hover:bg-teal-dark hover:border-white/20 hover:text-white hover:bg-white/10 text-white rounded-xl px-6 shadow-lg shadow-teal/20 border border-teal hover:border-white/20 transition-all">
                       <Mail className="w-4 h-4 mr-2" />
                       Email Me
                     </Button>
                   </a>
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/marah-aljabali" target="_blank" rel="noopener noreferrer">
                     <Button
                       className="bg-teal hover:bg-white/10 hover:border-white/20 text-white rounded-xl px-6 shadow-lg shadow-teal/20 border border-teal hover:border-white/20 transition-all"
                     >
@@ -852,7 +577,7 @@ export default function Home() {
                       GitHub
                     </Button>
                   </a>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://linkedin.com/marahaljabaly" target="_blank" rel="noopener noreferrer">
                     <Button
                       className="bg-teal hover:bg-white/10 hover:border-white/20 text-white rounded-xl px-6 shadow-lg shadow-teal/20 border border-teal hover:border-white/20 transition-all"
                     >
@@ -879,7 +604,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/marah-aljabali"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-light transition-colors"
@@ -887,7 +612,7 @@ export default function Home() {
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://linkedin.com/marahaljabaly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-light transition-colors"
@@ -895,7 +620,7 @@ export default function Home() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:aljabalymarah@gmail.com"
                 className="hover:text-teal-light transition-colors"
               >
                 <Mail className="w-4 h-4" />
