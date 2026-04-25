@@ -16,7 +16,7 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AI Portfolio | Computer Engineering Graduate",
+  title: "AI-Based Marah Graduation Project",
   description:
     "Portfolio showcasing AI projects in Equivalence Systems and AI Assistants for Universities, built as graduation projects in Computer Engineering.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Graduation Project",
   ],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "🎓",
   },
 };
 
