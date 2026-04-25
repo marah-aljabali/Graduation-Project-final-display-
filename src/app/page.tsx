@@ -223,6 +223,7 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.div>
+      </section>
 
       {/* ─── AMBITION QUOTE ─── */}
       <section className="relative z-10 -mt-12">
