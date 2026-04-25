@@ -155,11 +155,10 @@ export default function Home() {
               href="#hero"
               className="font-serif text-xl text-white tracking-tight"
             >
-              <span className="text-teal-light">AI</span> Portfolio
+              <span className="text-teal-light">AI-Based</span> Marah Graduation Project
             </a>
             <div className="hidden md:flex items-center gap-8">
               {[
-                ["About", "#about"],
                 ["Projects", "#projects"],
                 ["Contact", "#contact"],
               ].map(([label, href]) => (
@@ -220,7 +219,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 border border-amber/40 bg-amber/10 text-amber px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
             >
               <GraduationCap className="w-3.5 h-3.5" />
-              Computer Engineering Graduate
+              Eng. Marah Ahmed Aljabali
             </motion.div>
 
             {/* Title */}
